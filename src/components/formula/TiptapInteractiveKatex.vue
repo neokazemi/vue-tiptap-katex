@@ -25,7 +25,7 @@
       color="blue"
       @click="editMode = true"
     >
-      mdi-pencil
+      <span class="mdi mdi-pencil" />
     </div>
     <div
       v-if="editMode"
@@ -33,7 +33,7 @@
       color="green"
       @click="toggleEdit"
     >
-      mdi-check
+      <span class="mdi mdi-check" />
     </div>
   </node-view-wrapper>
 </template>

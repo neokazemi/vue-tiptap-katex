@@ -1,48 +1,52 @@
 <template>
-<!--  <v-btn-toggle-->
-<!--    v-model="bubbleMenuItems"-->
-<!--    dense-->
-<!--    background-color="primary"-->
-<!--    dark-->
-<!--    multiple-->
-<!--  >-->
-<!--    <v-btn-->
-<!--      :value="'H1'"-->
-<!--      @click="editor.chain().focus().toggleHeading({ level: 1 }).run()"-->
-<!--    >-->
-<!--      <v-icon>mdi-format-header-1</v-icon>-->
-<!--    </v-btn>-->
-<!--    <v-btn-->
-<!--      :value="'H2'"-->
-<!--      @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"-->
-<!--    >-->
-<!--      <v-icon>mdi-format-header-2</v-icon>-->
-<!--    </v-btn>-->
-<!--    <v-btn-->
-<!--      :value="'bulletList'"-->
-<!--      @click="editor.chain().focus().toggleBulletList().run()"-->
-<!--    >-->
-<!--      <v-icon>mdi-format-list-bulleted</v-icon>-->
-<!--    </v-btn>-->
-<!--    <v-btn-->
-<!--      :value="'insertTable'"-->
-<!--      @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()"-->
-<!--    >-->
-<!--      <v-icon>mdi-table-plus</v-icon>-->
-<!--    </v-btn>-->
-<!--    <v-btn-->
-<!--      :value="'insertTable'"-->
-<!--      @click="editor.chain().focus().insertContent('<tiptap-interactive-katex></tiptap-interactive-katex>').run()"-->
-<!--    >-->
-<!--      <v-icon>mdi-sigma</v-icon>-->
-<!--    </v-btn>-->
-<!--  </v-btn-toggle>-->
-  <div>
-    SlotBubbleMenu
+  <div class="tiptap-toolbar dynamic">
+    <ul>
+      <li>
+        <div
+          class="toolbar-item"
+          @click="editor.chain().focus().toggleHeading({ level: 1 }).run()"
+        >
+          <span class="mdi mdi-format-header-1 toolbar-item-icon" />
+        </div>
+      </li>
+      <li>
+        <div
+          class="toolbar-item"
+          @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"
+        >
+          <span class="mdi mdi-format-header-2 toolbar-item-icon" />
+        </div>
+      </li>
+      <li>
+        <div
+          class="toolbar-item"
+          @click="editor.chain().focus().toggleBulletList().run()"
+        >
+          <span class="mdi mdi-format-list-bulleted toolbar-item-icon" />
+        </div>
+      </li>
+      <li>
+        <div
+          class="toolbar-item"
+          @click="editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()"
+        >
+          <span class="mdi mdi-table-plus toolbar-item-icon" />
+        </div>
+      </li>
+      <li>
+        <div
+          class="toolbar-item"
+          @click="editor.chain().focus().insertContent('<tiptap-interactive-katex></tiptap-interactive-katex>').run()"
+        >
+          <span class="mdi mdi-sigma toolbar-item-icon" />
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+  import '@/css/toolbar-Item.scss'
   export default {
     name: 'SlotFloatingMenu',
     props: {

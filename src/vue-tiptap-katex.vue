@@ -16,7 +16,7 @@
       </div>
       <div class="pa-0">
         <bubble-menu
-          v-if="editorOptions && editorOptions.bubbleMenu"
+          v-if="editor && editorOptions && editorOptions.bubbleMenu"
           class="bubble-menu"
           :tippy-options="{ duration: 100, showOnCreate: false }"
           :editor="editor"
@@ -24,7 +24,7 @@
           <slot-bubble-menu :editor="editor" />
         </bubble-menu>
         <floating-menu
-          v-if="editorOptions && editorOptions.floatingMenu"
+          v-if="editor && editorOptions && editorOptions.floatingMenu"
           class="floating-menu"
           :tippy-options="{ duration: 100 }"
           :editor="editor"
@@ -69,6 +69,7 @@
   // import Focus from '@tiptap/extension-focus'
   import ThinSpace from './extension/ThinSpace/ThinSpace';
   // import Paper from './Drawing/Paper.js'
+  import '@mdi/font/css/materialdesignicons.css'
 
   import {
     Editor,
@@ -208,7 +209,7 @@
         return element
       },
       insertPoem({ state, view }, value) {
-        const { selection } = state
+        // const { selection } = state
         const element = this.elementFromString(value)
         const slice = DOMParser.fromSchema(state.schema).parseSlice(element)
 
@@ -231,6 +232,7 @@
         //   }
         // }
 
+        // eslint-disable-next-line no-unused-vars
         const { doc, tr } = state;
         let trx = tr;
 

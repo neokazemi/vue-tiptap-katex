@@ -29,7 +29,8 @@
     "lint": "vue-cli-service lint src"
   },
   "dependencies": {
-    "@mdi/font": "^5.8.55",
+    "@kyvg/vue3-notification": "^2.3.4",
+    "@mdi/font": "^6.5.95",
     "@tiptap/core": "^2.0.0-beta.102",
     "@tiptap/extension-document": "^2.0.0-beta.13",
     "@tiptap/extension-focus": "^2.0.0-beta.26",
@@ -45,13 +46,14 @@
     "@tiptap/extension-underline": "^2.0.0-beta.16",
     "@tiptap/starter-kit": "^2.0.0-beta.101",
     "@tiptap/vue-3": "^2.0.0-beta.48",
-    "mathlive": "^0.69.9",
     "@vue/component-compiler-utils": "^3.3.0",
     "@xkeshi/image-compressor": "^0.5.3",
+    "babel-loader": "^8.2.3",
     "core-js": "^3.6.5",
     "cropperjs": "^1.5.11",
     "css-loader": "^3.6.0",
     "katex": "^0.15.1",
+    "mathlive": "^0.69.9",
     "node-sass": "^6.0.0",
     "postcss-loader": "^4.2.0",
     "sass-loader": "^10.1.1",
@@ -59,8 +61,8 @@
     "turndown": "^7.0.0",
     "v-tooltip": "^4.0.0-beta.2",
     "vue-drag-resize": "^1.5.4",
+    "vue-material-design-icons": "^5.0.0",
     "vue-upload-component": "^2.8.22",
-    "@kyvg/vue3-notification": "^2.3.4",
     "webpack": "<=4"
   },
   "devDependencies": {
@@ -70,8 +72,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^7.20.0",
-    "vue-template-compiler": "^2.6.14",
-    "vue": "^3.2.26"
+    "vue": "^3.2.26",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
     "root": true,
