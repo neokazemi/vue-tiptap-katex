@@ -19,14 +19,14 @@
       @click="editMode = true"
       v-html="computedKatex"
     />
-    <div
-      v-if="!editMode"
-      icon
-      color="blue"
-      @click="editMode = true"
-    >
-      <span class="mdi mdi-pencil" />
-    </div>
+<!--    <div-->
+<!--      v-if="!editMode"-->
+<!--      icon-->
+<!--      color="blue"-->
+<!--      @click="editMode = true"-->
+<!--    >-->
+<!--      <span class="mdi mdi-pencil" />-->
+<!--    </div>-->
     <div
       v-if="editMode"
       icon
@@ -397,6 +397,20 @@ export default {
 
 .ML__keyboard div .rows>ul>li aside {
   color: #fff !important;
+}
+
+.mdi-check {
+  color: #4caf50;
+  font-size: 24px;
+  margin: 0 10px 0 0;
+  padding: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: background-color .2s cubic-bezier(.4,0,.6,1);
+}
+
+.mdi-check:hover {
+  background-color: rgba(76, 175, 80, 0.2);
 }
 
 @media only screen and (min-width: 1025px) {
